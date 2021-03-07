@@ -12,9 +12,15 @@ public final class Dog extends Lion {
         return hunger;
     }
 
+//В классе 3-го уровня перезаписать один из методов родителя
     @Override
     public void makeNoise(int number, String voice) {
         super.makeNoise(number, voice);
         System.out.println("Умею только Гав Гав ");
+    }
+
+    @Override
+    public String getInfo() {
+        return super.getInfo() + "Dog \n Hunger:" + getHunger();
     }
 }
